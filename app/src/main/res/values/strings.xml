@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name" translatable="false">Vokruge</string>
+    <string name="support_email" translatable="false">v-okruge@yandex.ru</string>
+    <string name="app_in_google_play" translatable="false">https://play.google.com/store/apps/</string>
+    <string name="support_number" translatable="false">+7 812 000 00 00</string>
+
+    <string name="send_mail_title">Send mail…</string>
+    <string name="message_subject">Application \'VOkruge\'</string>
+    <string name="problem_message">Describe your problem.</string>
+
+    <string name="user_location_permission_explanation">Location access permissions required</string>
+    <string name="user_location_permission_not_granted">No access to location information</string>
+    <string name="tvCompanyFragmentTitle">Companies list</string>
+    <string name="tvItemCompanyDefaultName">Name</string>
+    <string name="tvItemCompanyDefaultDescription">Description</string>
+    <string name="tvItemCompanyDefaultAddress">Address</string>
+    <string name="tvItemCompanyDefaultDistance" translatable="false">_____</string>
+    <string name="ivItemCompanyDefaultImageDesc" translatable="false">ImageDescription</string>
+    <string name="actionLogin">Login to profile</string>
+    <string name="tools">Tools</string>
+    <string name="additionally">Additionally</string>
+    <string name="about_the_app">About the app</string>
+    <string name="send_email">Send email</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="about_the_project_1">City guide / guide / navigator / encyclopedia of organizations, institutions, firms,
+        shops, salons, schedules and much more with a map of the location of objects and navigation, mode of operation and
+        the ability to contact directly from the application.
+    </string>
+    <string name="about_the_project_2">All this - in your mobile phone in one application, which works offline.
+    </string>
+    <string name="text_to_close">close</string>
+    <string name="share_app">Share app</string>
+    <string name="application_absent">Application does not exist</string>
+    <string name="vokruge_contacts">VOkruge contacts</string>
+    <string name="call">Call</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
+    <string name="search_address" translatable="false">Search_address</string>
+    <string name="settings">Settings</string>
+    <string name="add_event">Add event</string>
+    <string name="add_place">Add place</string>
+    <string name="rate_app">Rate app</string>
+    <string name="write_to_tech_support">Write to tech support</string>
+    <string name="text_my_vokruge">My Vokruge</string>
+    <string name="tab_name_info">Info</string>
+    <string name="tab_name_comments">Comments</string>
+    <string name="search_hint">Search</string>
+    <string name="empty_history_label">Your search history is empty.\n
+    Write your first request, and we will remember it.</string>
+    <string name="clear_history_button">Clear the history</string>
+    <string name="detail_info_title_schedule">Schedule</string>
+    <string name="detail_info_not_found">No information</string>
+    <string name="detail_info_title_contacts">Contacts</string>
+    <string name="detail_info_default_address" translatable="false">address</string>
+    <string name="detail_info_image_description" translatable="false">Description</string>
+    <string name="detail_info_stocks_default">Soon there will be stock information</string>
+    <string name="detail_info_title_photo">Photo</string>
+    <string name="detail_info_btn_error">Report a bug</string>
+    <string name="detail_rating_count"><u>0 reviews</u></string>
+    <string name="info_tab">Information</string>
+    <string name="review_tab">Reviews</string>
+    <string name="more_tab">More details</string>
+</resources>

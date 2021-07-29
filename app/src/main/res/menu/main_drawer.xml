@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/settings_cogwheel_button"
+                android:title="@string/settings"
+                android:visible="false" />
+
+        <item
+                android:id="@+id/nav_about_the_app"
+                android:icon="@drawable/round_help_button"
+                android:title="@string/about_the_app" />
+
+        <item
+                android:id="@+id/nav_add_event"
+                android:icon="@drawable/calendar_with_six_days"
+                android:title="@string/add_event"
+                android:visible="false" />
+
+        <item
+                android:id="@+id/nav_add_place"
+                android:icon="@drawable/ion_ios_pin"
+                android:title="@string/add_place"
+                android:visible="false" />
+
+        <item
+                android:id="@+id/nav_send_email"
+                android:icon="@drawable/ic_baseline_error_outline"
+                android:title="@string/write_to_tech_support" />
+
+        <item
+                android:id="@+id/nav_rate_app"
+                android:icon="@drawable/mdi_google_play"
+                android:title="@string/rate_app" />
+
+        <item
+                android:id="@+id/nav_share_app"
+                android:icon="@drawable/ic_share"
+                android:title="@string/share_app" />
+    </group>
+</menu>

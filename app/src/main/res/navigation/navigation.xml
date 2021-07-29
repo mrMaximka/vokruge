@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navigation.xml"
+        app:startDestination="@id/mapFragment">
+
+    <fragment
+            android:id="@+id/detailFragment"
+            android:name="ru.gb.vokruge.ui.detail.DetailFragment"
+            android:label="detail_fragment"
+            tools:layout="@layout/detail_fragment">
+        <argument
+                android:name="position"
+                app:argType="integer"/>
+        <action
+                android:id="@+id/action_detailFragment_to_mapFragment"
+                app:destination="@id/mapFragment" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/mapFragment"
+            android:name="ru.gb.vokruge.ui.map.MapFragment"
+            android:label="MapFragment">
+
+        <action
+                android:id="@+id/action_mapFragment_to_categoryFragment"
+                app:destination="@id/categoryFragment"/>
+
+        <action
+                android:id="@+id/action_mapFragment_to_detailFragment"
+                app:destination="@id/detailFragment"/>
+
+        <action
+                android:id="@+id/action_mapFragment_to_searchFragment"
+                app:destination="@id/searchFragment"/>
+
+        <action
+                android:id="@+id/action_mapFragment_to_subcategoryFragment"
+                app:destination="@id/subcategoryFragment" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/categoryFragment"
+            android:name="ru.gb.vokruge.ui.category.CategoryFragment"
+            android:label="category_fragment"
+            tools:layout="@layout/category_fragment">
+
+        <action
+                android:id="@+id/action_categoryFragment_to_subcategoryFragment"
+                app:destination="@id/subcategoryFragment"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/subcategoryFragment"
+            android:name="ru.gb.vokruge.ui.subcategory.SubcategoryFragment"
+            android:label="subcategory_fragment"
+            tools:layout="@layout/subcategory_fragment">
+
+        <action
+                android:id="@+id/action_subcategoryFragment_to_mapFragment"
+                app:destination="@id/mapFragment"
+                app:launchSingleTop="false"
+                app:popUpTo="@+id/mapFragment"
+                app:popUpToInclusive="true" />
+
+        <argument
+                android:name="idCategory"
+                app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/searchFragment"
+            android:name="ru.gb.vokruge.ui.search.SearchFragment"
+            android:label="search_fragment"
+            tools:layout="@layout/search_fragment">
+
+        <action
+                android:id="@+id/action_searchFragment_to_mapFragment"
+                app:destination="@id/mapFragment" />
+
+    </fragment>
+
+</navigation>

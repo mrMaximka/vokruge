@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="send_mail_title">Отправить письмо…</string>
+    <string name="message_subject">Приложение \'VOkruge\'</string>
+    <string name="problem_message">Опишите вашу проблему.</string>
+
+    <string name="user_location_permission_explanation">Необходимы разрешения на достум к местоположению</string>
+    <string name="user_location_permission_not_granted">Отсутствует доступ к информации о местоположении</string>
+    <string name="tvCompanyFragmentTitle">Список компаний</string>
+    <string name="tvItemCompanyDefaultName">Название</string>
+    <string name="tvItemCompanyDefaultDescription">Описание</string>
+    <string name="tvItemCompanyDefaultAddress">Адрес</string>
+    <string name="actionLogin">Войти в профиль</string>
+    <string name="tools">Инструменты</string>
+    <string name="additionally">Дополнительно</string>
+    <string name="about_the_app">О приложении</string>
+    <string name="send_email">Отправить email</string>
+    <string name="about_the_project_1">Городской справочник/гид/навигатор/энциклопедия организаций, учреждений, фирм,
+        магазинов, салонов, расписаний и много другого с картой расположения объектов и навигацией, режимом работы и
+        возможностью связаться прямо из приложения.
+    </string>
+    <string name="about_the_project_2">Всё это – в вашем мобильном телефоне в одном приложении, которое работает офлайн.
+    </string>
+    <string name="text_to_close">закрыть</string>
+    <string name="share_app">Поделиться приложением</string>
+    <string name="application_absent">Приложение не найдено</string>
+    <string name="vokruge_contacts">Контакты VOkruge</string>
+    <string name="call">Позвонить</string>
+    <string name="zoom_in">Прриблизить</string>
+    <string name="zoom_out">Отдалить</string>
+    <string name="settings">Настройки</string>
+    <string name="add_event">Добавить мероприятие</string>
+    <string name="add_place">Добавить место</string>
+    <string name="rate_app">Оценить приложение</string>
+    <string name="write_to_tech_support">Написать в техподдержку</string>
+    <string name="text_my_vokruge">Мой Vokruge</string>
+    <string name="tab_name_info">Информация</string>
+    <string name="tab_name_comments">Отзывы</string>
+    <string name="search_hint">Поиск</string>
+    <string name="empty_history_label">Ваша история поиска пуста.\n
+    Напишите свой первый запрос, а мы его запомним.</string>
+    <string name="clear_history_button">Очистить историю</string>
+    <string name="detail_info_title_schedule">График работы</string>
+    <string name="detail_info_not_found">Нет информации</string>
+    <string name="detail_info_title_contacts">Контакты</string>
+    <string name="detail_info_stocks_default">Скоро на этом месте будет информация об акциях</string>
+    <string name="detail_info_title_photo">Фото</string>
+    <string name="detail_info_btn_error">Сообщить об ошибке</string>
+    <string name="detail_rating_count"><u>0 отзывов</u></string>
+    <string name="info_tab">Информация</string>
+    <string name="review_tab">Отзывы</string>
+    <string name="more_tab">Подробнее</string>
+</resources>

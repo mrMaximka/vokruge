@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="model"
+                type="ru.gb.vokruge.ui.map.MapViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.map.MapFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.mapbox.mapboxsdk.maps.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/panel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                    android:id="@+id/ivZoomIn"
+                    android:layout_width="@dimen/icon_on_map_size"
+                    android:layout_height="@dimen/icon_on_map_size"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="@string/zoom_in"
+                    android:onClick="@{()->model.onZoomInClick()}"
+                    app:layout_constraintBottom_toTopOf="@+id/ivZoomOut"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_plus" />
+
+            <ImageView
+                    android:id="@+id/ivZoomOut"
+                    android:layout_width="@dimen/icon_on_map_size"
+                    android:layout_height="@dimen/icon_on_map_size"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="77dp"
+                    android:contentDescription="@string/zoom_out"
+                    android:onClick="@{()->model.onZoomOutClick()}"
+                    app:layout_constraintBottom_toTopOf="@+id/ivLocation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_minus" />
+
+            <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="@dimen/icon_on_map_size"
+                    android:layout_height="@dimen/icon_on_map_size"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="159dp"
+                    android:contentDescription="Location"
+                    android:onClick="@{()->model.onLocationClick()}"
+                    android:src="@drawable/ic_navigation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                    android:id="@+id/ivShowList"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="32dp"
+                    android:contentDescription="Show List"
+                    android:onClick="@{()->model.onShowListClick()}"
+                    android:src="@drawable/ic_show_list"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            <FrameLayout
+                    android:id="@+id/panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                <FrameLayout
+                        android:id="@+id/category_short_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/short_panel_height"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    <fragment
+                            android:name="ru.gb.vokruge.ui.categoryshort.ShortCategoryFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                        android:id="@+id/detail_short_fragment_frame"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/short_panel_height"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    <fragment
+                            android:id="@+id/detail_short_fragment"
+                            android:name="ru.gb.vokruge.ui.detailshort.ShortDetailFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+                android:id="@+id/list_fragment_frame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_visible_height"
+                android:visibility="gone"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="120dp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <fragment
+                    android:id="@+id/list_fragment"
+                    android:name="ru.gb.vokruge.ui.list.ListFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/search_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@color/translucent"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                //nav_menu_ic это для того чтобы не слетало расположение элементов во время
+                изменения видимости
+
+                <ImageView
+                        android:id="@+id/nav_menu_ic"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/nav_menu_btn"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="@{()->model.onShowDrawerClick()}"
+                        android:src="@drawable/ic_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/back_menu_btn"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="@{()->model.onBackSearchClick()}"
+                        android:src="@drawable/ic_back_main"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/card_id_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:onClick="@{()->model.onSearchClick()}"
+                        android:text="@string/search_hint"
+                        android:textColor="#606268"
+                        android:textSize="19sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/close_search"
+                        app:layout_constraintStart_toEndOf="@+id/nav_menu_ic"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/close_search"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="7dp"
+                        android:onClick="@{()->model.onClearSearchClick()}"
+                        android:src="@drawable/ic_close"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

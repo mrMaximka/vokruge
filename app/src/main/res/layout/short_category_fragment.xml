@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="model" type="ru.gb.vokruge.ui.categoryshort.ShortCategoryViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.categoryshort.ShortCategoryFragment">
+
+        <ImageView
+                android:id="@+id/ivCat24"
+                android:src="@drawable/ic_group_24"
+                android:layout_width="@dimen/category_icon_size"
+                android:layout_height="@dimen/category_icon_size"
+                android:layout_marginTop="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="23dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/ivCat3"
+                android:onClick="@{()->model.onSubCategoryClick(24)}"/>
+
+        <TextView
+                android:id="@+id/tvCat24"
+                android:text="Еда"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivCat24"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivCat24"
+                app:layout_constraintTop_toBottomOf="@+id/ivCat24"
+                android:fontFamily="@font/roboto"
+                android:textSize="@dimen/category_text_size"
+                android:textColor="@color/category_text_color"/>
+
+        <ImageView
+                android:id="@+id/ivCat3"
+                android:src="@drawable/ic_group_7"
+                android:layout_width="@dimen/category_icon_size"
+                android:layout_height="@dimen/category_icon_size"
+                android:layout_marginTop="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivCat7"
+                android:layout_marginStart="23dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivCat24"
+                android:onClick="@{()->model.onSubCategoryClick(3)}" />
+
+        <TextView
+                android:id="@+id/tvCat7"
+                android:text="Досуг"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivCat3"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivCat3"
+                app:layout_constraintTop_toBottomOf="@+id/ivCat3"
+                android:fontFamily="@font/roboto"
+                android:textSize="@dimen/category_text_size"
+                android:textColor="@color/category_text_color"/>
+
+        <ImageView
+                android:id="@+id/ivCat7"
+                android:src="@drawable/ic_group_3"
+                android:layout_width="@dimen/category_icon_size"
+                android:layout_height="@dimen/category_icon_size"
+                android:layout_marginTop="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivCat3"
+                android:layout_marginStart="23dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewAll"
+                android:onClick="@{()->model.onSubCategoryClick(7)}" />
+
+        <TextView
+                android:id="@+id/tvCat3"
+                android:text="Покупки"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivCat7"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivCat7"
+                app:layout_constraintTop_toBottomOf="@+id/ivCat7"
+                android:fontFamily="@font/roboto"
+                android:textSize="@dimen/category_text_size"
+                android:textColor="@color/category_text_color"/>
+
+        <ImageView
+                android:id="@+id/imageViewAll"
+                android:src="@drawable/ic_group_all"
+                android:layout_width="@dimen/category_icon_size"
+                android:layout_height="@dimen/category_icon_size"
+                android:layout_marginTop="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivCat7"
+                android:layout_marginStart="23dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"
+                android:onClick="@{()->model.onAllCategoryClick()}"/>
+
+        <TextView
+                android:id="@+id/tvCatAll"
+                android:text="Показать все"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewAll"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageViewAll"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewAll"
+                android:fontFamily="@font/roboto"
+                android:textSize="@dimen/category_text_size"
+                android:textColor="@color/category_text_color"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeNoActionBar" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorFlirt</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:navigationBarColor">@color/colorTransparent</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+
+    </style>
+
+    <style name="containerCompanyListStyle">
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="ivItemCompanyDistanceStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:text">@string/tvItemCompanyDefaultDistance</item>
+    </style>
+
+    <style name="tvItemCompanyNameStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:text">@string/tvItemCompanyDefaultName</item>
+    </style>
+
+    <style name="tvItemCompanyDescriptionStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:text">@string/tvItemCompanyDefaultDescription</item>
+    </style>
+
+    <style name="tvItemCompanyAddressStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:text">@string/tvItemCompanyDefaultAddress</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CompanyRatingBarSmall" parent="@style/Widget.AppCompat.RatingBar.Small">
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+
+    <style name="black_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+    </style>
+
+    <style name="separator_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="black_text.Header">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="NoShadowButton" parent="android:style/Widget.Button">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="DetailInfoTextStandardStyle">
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="DetailInfoTextTitleStyle">
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/holo_green_light</item>
+        <item name="colorControlActivated">@android:color/holo_orange_dark</item>
+    </style>
+</resources>

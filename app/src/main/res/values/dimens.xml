@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="avatar_dimension">100dp</dimen>
+    <dimen name="short_panel_height">113dp</dimen>
+    <dimen name="list_visible_height">400dp</dimen>
+    <dimen name="category_icon_size">60dp</dimen>
+    <dimen name="category_text_size">12sp</dimen>
+    <dimen name="icon_on_map_size">40dp</dimen>
+    <dimen name="spacing_very_small">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_middle">7dp</dimen>
+    <dimen name="spacing_huge">24dp</dimen>
+    <dimen name="spacing_greatest">32dp</dimen>
+    <dimen name="image_button_size">40dp</dimen>
+    <dimen name="logo_size">60dp</dimen>
+
+</resources>
